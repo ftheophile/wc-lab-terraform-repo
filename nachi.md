@@ -1,2 +1,2 @@
-# i love terraform
+# i love terraform.
 its great working with terraform for provisioning resouces.
