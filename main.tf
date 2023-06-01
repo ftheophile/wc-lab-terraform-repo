@@ -77,5 +77,3 @@ resource "aws_subnet" "db-subnet" {
 
   tags = {
     Name = "database"
-  }
-}
