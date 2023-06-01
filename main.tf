@@ -1,5 +1,5 @@
 provider "aws" {
-  region              = "us-east-1a"
+  region              = "us-east-1"
   profile             = "default"
 }
 
@@ -77,3 +77,5 @@ resource "aws_subnet" "db-subnet" {
 
   tags = {
     Name = "database"
+  }
+}
