@@ -38,7 +38,7 @@ it was my favourite aw well tatiana
 # Yolanda.Indeed Tatiana! Looking forward to learning more.
 # NACHI
 # Yvonne. git is a very interest Source control tool
->--------------
+>----------------
 
 >---- yolanda ----
 I like working with git
@@ -51,4 +51,5 @@ many thanks to an amazing lead theo for being patient
 # it was indeed a great experience Yolande
 # NACHI
 # Yvonne. Indeed Yolanda great learning expience
+>------------------
 
