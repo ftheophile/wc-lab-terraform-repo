@@ -19,7 +19,7 @@ It does not matter what ever you do but the love and motivation in which you do 
 The first step is the reason for reaching a thousands steps.
 #titus
 
->It's a pleasure working with you all: yvonne, titus, nachi, Tatiana, yolande, ugo, thiery
+>It's a pleasure working with you all: yvonne, titus, nachi, Tatiana, Yolande, ugo, thiery
 
 >---- theo ----
 * I like working with git
@@ -39,3 +39,16 @@ it was my favourite aw well tatiana
 # NACHI
 # Yvonne. git is a very interest Source control tool
 >--------------
+
+>---- yolanda ----
+I like working with git
+This is my first repository
+It was a pleasure
+# Nice write-up Yolande
+yesterday the group had about 4 hours of working on git
+it was a great experience learning from each and everyone
+many thanks to an amazing lead theo for being patient 
+# it was indeed a great experience Yolande
+# NACHI
+# Yvonne. Indeed Yolanda great learning expience
+
