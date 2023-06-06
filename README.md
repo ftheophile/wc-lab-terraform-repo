@@ -20,6 +20,7 @@ The first step is the reason for reaching a thousands steps.
 #titus
 
 >It's a pleasure working with you all: yvonne, titus, nachi, tatiana, yolande, ugo, thiery
+
 >---- theo ----
 * I like working with git
 * I will be using it alongside terraform
