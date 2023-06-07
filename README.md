@@ -18,3 +18,44 @@ It does not matter what ever you do but the love and motivation in which you do 
   I love terraform
 The first step is the reason for reaching a thousands steps.
 #titus
+
+>It's a pleasure working with you all: yvonne, titus, nachi, Tatiana, Yolande, ugo, thiery, Thecla
+
+>---- theo ----
+* I like working with git
+* I will be using it alongside terraform
+* Terraform is my favourite iac tool
+>--------------
+
+>---- tatiana ----
+# Tatiana is learning how to use git
+# I will use it together with terraform
+Terraform is my favourite iac tool
+great job, keep the good work
+it was my favourite aw well tatiana
+# it was interesting learning and working with git yesterday
+> I loved the experience.
+# Yolanda.Indeed Tatiana! Looking forward to learning more.
+# NACHI
+# Yvonne. git is a very interest Source control tool
+>----------------
+
+>---- yolanda ----
+I like working with git
+This is my first repository
+It was a pleasure
+# Nice write-up Yolande
+yesterday the group had about 4 hours of working on git
+it was a great experience learning from each and everyone
+many thanks to an amazing lead theo for being patient 
+# it was indeed a great experience Yolande
+# NACHI
+# Yvonne. Indeed Yolanda great learning expience
+>------------------
+
+>-------Thecla --------------
+My first git account
+I will use this to work on terraform
+i never give up
+am glad am here now
+>----------------------------
