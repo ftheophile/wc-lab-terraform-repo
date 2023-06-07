@@ -6,8 +6,8 @@ so I completely forgot what tasks we were assigned last week
 # Tatiana
 
 no upward lifecycle transition. buckets keys make things very easy.objects are encrypted not buckets.
-
-#Thierry
+Theo please can we have an assignment for the weekend.
+# Thierry
 
 “Don’t let yesterday take up too much of today.” — Will Rogers
 # Ugo
