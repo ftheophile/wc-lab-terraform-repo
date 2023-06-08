@@ -66,3 +66,5 @@ Git is all about doing it and not reading it .
 Doing it as a team is agile .
 Am fortunate to work with resource people in Wirfon Community.
 Lets keep the doing and complement with talking.
+
+ambi.md file deleted from wc-lab-terraform-repo.
