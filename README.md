@@ -31,7 +31,7 @@ It does not matter what ever you do but the love and motivation in which you do 
 The first step is the reason for reaching a thousands steps.
 #titus
 
->It's a pleasure working with you all: yvonne, Titus, nachi, Tatiana, Yolande, ugo, thiery, Thecla
+>It's a pleasure working with you all: yvonne, Titus, nachi, Tatiana, Yolande, Ugo, thiery, Thecla
 
 >---- theo ----
 * I like working with git
@@ -93,6 +93,7 @@ I noticed your file "yvonne" does not have the .md extension good to know that g
 
 Git is a great Source control tool to work with especially when intergrated with Terraform. I love working with git.
 
+<<<<<<< HEAD
 #Yvonne
 
 Last Friday i didn't attend the the lab sessions
@@ -104,3 +105,10 @@ Quite undstanding yvonne, you are a motivation.
 I noticed your file "yvonne" does not have the .md extension good to know that github accepts it!
  
 Git is a great Source control tool to work with especially when intergrated with Terraform. I love working with git.
+=======
+>--------Ugo------------
+# I like working with git
+# I will be using it alongside Terraform
+# Terraform is my favourite iac tool
+>-----------------------
+>>>>>>> 8944f1944708de045fa4370f44812cd11b60c50c
