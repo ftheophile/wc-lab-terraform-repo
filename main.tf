@@ -90,8 +90,6 @@ resource "aws_subnet" "db-subnet" {
     Name = "database"
   }
 }
-<<<<<<< HEAD
-=======
 
 #Associate SUBNET with Route Table
 
@@ -170,4 +168,3 @@ resource "aws_eip" "one" {
 }
 
 
->>>>>>> f36d3f0e08889be76ee1eec4b0103119a7bc1b68
