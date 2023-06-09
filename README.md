@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-# wc-lab-terraform-repo
-Wirfon Cloud lab exercise repository
-Last Friday i didn't attend the the lab sessions
-i had to listen to the recordings and do the labs
-Athough very long but very interesting.
-Thank you Theo and the entire Wirfon-lab family for 
-your time and dedication. 
-Quite undstanding yvonne, you are a motivation.
-I noticed your file "yvonne" does not have the .md extension good to know that github accepts it!
-# Yolanda 
-=======
 "Live as if you were to die tomorrow
 Learn as if you were to live forever"
 # Mahatma Gandhi - (one of Yolande's favourite quotes)
@@ -26,12 +14,12 @@ Theo please can we have an assignment for the weekend.
 
 It does not matter what ever you do but the love and motivation in which you do it.
 # Yvonne
- #  nachi 
+ #  nachi nachi nachi nachi nachi nachi
   I love terraform
 The first step is the reason for reaching a thousands steps.
 #titus
 
->It's a pleasure working with you all: yvonne, Titus, nachi, Tatiana, Yolande, ugo, thiery, Thecla
+>It's a pleasure working with you all: Yvonne, Titus, nachi, Tatiana, Yolande, Ugo, thiery, Thecla, Theo
 
 >---- theo ----
 * I like working with git
@@ -79,8 +67,6 @@ Doing it as a team is agile .
 Am fortunate to work with resource people in Wirfon Community.
 Lets keep the doing and complement with talking.
 
-ambi.md file deleted from wc-lab-terraform-repo.
->>>>>>> f36d3f0e08889be76ee1eec4b0103119a7bc1b68
 Last Friday i didn't attend the the lab sessions
 i had to listen to the recordings and do the labs
 Athough very long but very interesting.
@@ -92,3 +78,10 @@ I noticed your file "yvonne" does not have the .md extension good to know that g
 
 
 Git is a great Source control tool to work with especially when intergrated with Terraform. I love working with git.
+>-----------------------------------
+
+>--------Ugo------------
+# I like working with git
+# I will be using it alongside Terraform
+# Terraform is my favourite iac tool
+>-----------------------

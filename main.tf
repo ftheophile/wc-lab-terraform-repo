@@ -9,7 +9,7 @@ resource "aws_instance" "my-first-server" {
   instance_type     = "t2.micro"
   subnet_id         = aws_subnet.app-subnet.id
   availability_zone = "us-east-1a"
-  security_groups   = [aws_security_group.allow_web.id]
+  vpc_security_group_ids   = [aws_security_group.allow_web.id]
 
 
 
