@@ -31,7 +31,7 @@ It does not matter what ever you do but the love and motivation in which you do 
 The first step is the reason for reaching a thousands steps.
 #titus
 
->It's a pleasure working with you all: yvonne, Titus, nachi, Tatiana, Yolande, ugo, thiery, Thecla
+>It's a pleasure working with you all: yvonne, Titus, nachi, Tatiana, Yolande, Ugo, thiery, Thecla
 
 >---- theo ----
 * I like working with git
