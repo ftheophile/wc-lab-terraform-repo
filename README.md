@@ -14,7 +14,7 @@ Theo please can we have an assignment for the weekend.
 
 It does not matter what ever you do but the love and motivation in which you do it.
 # Yvonne
- #  NACHI NACHI NACHI NACHI
+ #  NACHI NACHI NACHI NACHI NACHI
   I love terraform
 The first step is the reason for reaching a thousands steps.
 #titus
