@@ -19,7 +19,7 @@ It does not matter what ever you do but the love and motivation in which you do 
 The first step is the reason for reaching a thousands steps.
 #titus
 
->It's a pleasure working with you all: Yvonne, Titus, Nachi, Tatiana, Yolande, Ugo, thiery, Thecla, Theory
+>It's a pleasure working with you all: Yvonne, Titus, Nachi, Tatiana, Yolande, Ugo, Thierry, Thecla, Theory
 
 >---- theo ----
 * I like working with git
@@ -85,3 +85,9 @@ Git is a great Source control tool to work with especially when intergrated with
 # I will be using it alongside Terraform
 # Terraform is my favourite iac tool
 >-----------------------
+
+*****Thierry********
+# wirfon cloud is the best
+bidirectional versioning is possible in aws s3
+when granting presigned url will grant same access as grantee
+>------------------------
