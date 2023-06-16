@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.dev-region
   profile = "default"
 }
 
@@ -8,7 +8,7 @@ resource "aws_instance" "my-first-server" {
   ami               = "ami-007855ac798b5175e"
   instance_type     = "t2.micro"
   subnet_id         = aws_subnet.app-subnet.id
-  availability_zone = "us-east-1a"
+  availability_zone = var.dev_az[0]
   vpc_security_group_ids   = [aws_security_group.allow_web.id]
 
 
@@ -22,8 +22,9 @@ resource "aws_instance" "my-first-server" {
             EOF
 
   tags = {
-    Name = "Ubuntu"
-
+    Name = "${var.org_name} Production instance"
+    Env = "${var.environment}-environment"
+    Purpose = "${var.purpose}"
   }
 
 }
@@ -43,7 +44,7 @@ resource "aws_vpc" "prod" {
 
 
   tags = {
-    Name = "production"
+    Name = "${var.org_name} production vpc"
   }
 }
 
@@ -75,19 +76,19 @@ resource "aws_route_table" "prod-route-table" {
 resource "aws_subnet" "app-subnet" {
   vpc_id            = aws_vpc.prod.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = var.dev_az[0]
 
   tags = {
-    Name = "application"
+    Name = "${var.org_name} application subnet"
   }
 }
 resource "aws_subnet" "db-subnet" {
   vpc_id            = aws_vpc.prod.id
   cidr_block        = "10.0.2.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = var.dev_az[1]
 
   tags = {
-    Name = "database"
+    Name = "${var.org_name} database subnet"
   }
 }
 
