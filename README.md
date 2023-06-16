@@ -27,12 +27,7 @@ The first step is the reason for reaching a thousands steps.
 * Terraform is my favourite iac tool
 >--------------
 
->-------Thecla --------------
-My first git account
-I will use this to work on terraform
-i never give up
-am glad am here now
->----------------------------
+
 
 >-------Titus------------------
 Great working with git.Am loving it.
