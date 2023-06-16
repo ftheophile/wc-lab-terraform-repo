@@ -161,6 +161,7 @@ resource "aws_network_interface" "nic" {
 }
 
 resource "aws_eip" "one" {
+  
   domain            = "vpc"
   network_interface = aws_network_interface.nic.id
   depends_on        = [aws_internet_gateway.gw]
