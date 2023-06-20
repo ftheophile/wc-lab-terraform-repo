@@ -29,7 +29,7 @@ resource "aws_instance" "my-first-server" {
 }
 
 #resource "aws_s3_bucket" "_dev_bucket" {
-#  bucket = "yvebuket2012"
+#  bucket = "Thierrybucket2012"
 
 # tags = {
 #    Name        = "My bucket"

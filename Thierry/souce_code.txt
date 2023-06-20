@@ -6,14 +6,14 @@ services:
     networks:
       - frontend
     deploy:
-      replicas: 1
+      replicas: 2
       update_config:
         parallelism: 2
-        delay: 10s
+        delay: 15s
       restart_policy:
         condition: on-failure
   db:
-    image: postgres:9.4
+    image: postgres:latest
     environment:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres"
@@ -41,7 +41,7 @@ services:
   result:
     image: dockersamples/examplevotingapp_result:before
     ports:
-      - 5001:80
+      - 5005:80
     networks:
       - backend
     depends_on:

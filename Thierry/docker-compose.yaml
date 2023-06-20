@@ -39,7 +39,7 @@ services:
       - back-tier
 
   db:
-    image: postgres:9.4
+    image: postgres:latest
     container_name: db
     environment:
       POSTGRES_USER: "postgres"
