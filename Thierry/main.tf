@@ -168,3 +168,4 @@ resource "aws_eip" "one" {
 }
 
 
+script tested and ready to go
