@@ -166,6 +166,3 @@ resource "aws_eip" "one" {
   depends_on        = [aws_internet_gateway.gw]
 
 }
-
-
-script tested and ready to go
