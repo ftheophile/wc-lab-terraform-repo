@@ -5,24 +5,23 @@ provider "aws" {
 
 
 resource "aws_instance" "my-first-server" {
-  ami               = "ami-007855ac798b5175e"
+  #ami               = "ami-007855ac798b5175e"
+  ami               = "ami-053b0d53c279acc90"
   instance_type     = "t2.micro"
   subnet_id         = aws_subnet.app-subnet.id
   availability_zone = "us-east-1a"
   vpc_security_group_ids   = [aws_security_group.allow_web.id]
 
-
-
   user_data = <<-EOF
-            #/bin/bash
-            sudo apt update -y
-            sudo apt install apache2 -y
-            sudo systemctl start apache2
-            sudo bash -c echo 'wirfon first server' > /var/www/html/index.html
-            EOF
-
+#!/bin/sh
+sudo apt update -y
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo -i
+echo 'wirfon first server' > /var/www/html/index.html
+EOF
   tags = {
-    Name = "Ubuntu"
+    Name = "WirfonCloud Ubuntu"
 
   }
 
@@ -149,22 +148,26 @@ resource "aws_security_group" "allow_web" {
 
 #Create A network interface
 
-resource "aws_network_interface" "nic" {
-  subnet_id = aws_subnet.app-subnet.id
-  #private_ips     = ["10.0.0.50"]
-  #security_groups = [aws_security_group.web.id]
+# resource "aws_network_interface" "nic" {
+#   subnet_id = aws_subnet.app-subnet.id
+#   #private_ips     = ["10.0.0.50"]
+#   #security_groups = [aws_security_group.web.id]
 
-  attachment {
-    instance     = aws_instance.my-first-server.id
-    device_index = 1
-  }
-}
+#   attachment {
+#     instance     = aws_instance.my-first-server.id
+#     device_index = 1
+#   }
+# }
 
 resource "aws_eip" "one" {
   domain            = "vpc"
-  network_interface = aws_network_interface.nic.id
+  #network_interface = aws_network_interface.nic.id
   depends_on        = [aws_internet_gateway.gw]
 
 }
 
+resource "aws_eip_association" "eip_assoc" {
+  instance_id = aws_instance.my-first-server.id
+  allocation_id  = aws_eip.one.id
+}
 
