@@ -1,2 +1,2 @@
-org_name = "WirfonCloud"
+org_name    = "WirfonCloud"
 environment = "Friday Labs"

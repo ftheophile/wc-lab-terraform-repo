@@ -4,30 +4,30 @@ provider "aws" {
 }
 
 
-resource "aws_instance" "my-first-server" {
-  ami               = "ami-007855ac798b5175e"
-  instance_type     = "t2.micro"
-  subnet_id         = aws_subnet.app-subnet.id
-  availability_zone = var.dev_az[0]
-  vpc_security_group_ids   = [aws_security_group.allow_web.id]
-
-
-
-  user_data = <<-EOF
-            #/bin/bash
-            sudo apt update -y
-            sudo apt install apache2 -y
-            sudo systemctl start apache2
-            sudo bash -c echo 'wirfon first server' > /var/www/html/index.html
-            EOF
-
-  tags = {
-    Name = "${var.org_name} Production instance"
-    Env = "${var.environment}-environment"
-    Purpose = "${var.purpose}"
-  }
-
+module "ec2server1" {
+  source      = "./modules/ec2server"
+  org_name    = "${var.org_name} Production instance"
+  environment = "${var.environment}-environment"
+  purpose     = var.purpose
+  subnetid    = aws_subnet.app-subnet.id
+  ec2az       = var.dev_az[0]
+  sec_group   = module.secgroup1.allow_web_sgid #aws_security_group.allow_web.id
+  eipid       = aws_eip.one.id
 }
+
+
+module "instance2" {
+  source      = "./modules/ec2server"
+  org_name    = "${var.org_name} Development instance"
+  environment = "${var.environment}-environment"
+  purpose     = var.purpose
+  subnetid    = aws_subnet.db-subnet.id
+  ec2az       = var.dev_az[1]
+  sec_group   = module.secgroup1.allow_web_sgid # aws_security_group.allow_web.id
+  eipid       = aws_eip.two.id
+  instancetype = "t3.micro"
+}
+
 
 #resource "aws_s3_bucket" "_dev_bucket" {
 #  bucket = "yvebuket2012"
@@ -41,8 +41,6 @@ resource "aws_instance" "my-first-server" {
 # Create a VPC
 resource "aws_vpc" "prod" {
   cidr_block = "10.0.0.0/16"
-
-
   tags = {
     Name = "${var.org_name} production vpc"
   }
@@ -82,6 +80,7 @@ resource "aws_subnet" "app-subnet" {
     Name = "${var.org_name} application subnet"
   }
 }
+
 resource "aws_subnet" "db-subnet" {
   vpc_id            = aws_vpc.prod.id
   cidr_block        = "10.0.2.0/24"
@@ -99,71 +98,26 @@ resource "aws_route_table_association" "rta" {
   route_table_id = aws_route_table.prod-route-table.id
 
 }
-#resource "aws_route_table_association" "b" {
-# gateway_id     = aws_internet_gateway.gw.id
-#route_table_id = aws_route_table.prod-route-table.id
-#}
 
 #Create Security Groups
-
-resource "aws_security_group" "allow_web" {
-  name        = "allow_web-traffic"
-  description = "Allow web inbound traffic"
-  vpc_id      = aws_vpc.prod.id
-
-  ingress {
-    description = "HTTPS"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "HTTP"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-
-  }
-
-  tags = {
-    Name = "allow_web"
-  }
-}
-
-#Create A network interface
-
-resource "aws_network_interface" "nic" {
-  subnet_id = aws_subnet.app-subnet.id
-  #private_ips     = ["10.0.0.50"]
-  #security_groups = [aws_security_group.web.id]
-
-  attachment {
-    instance     = aws_instance.my-first-server.id
-    device_index = 1
-  }
+module "secgroup1" {
+  source = "./modules/secgroup"
+  vpcid = aws_vpc.prod.id
 }
 
 resource "aws_eip" "one" {
-  domain            = "vpc"
-  network_interface = aws_network_interface.nic.id
-  depends_on        = [aws_internet_gateway.gw]
-
+  domain = "vpc"
+  # network_interface = aws_network_interface.nic.id
+  depends_on = [aws_internet_gateway.gw]
 }
+
+resource "aws_eip" "two" {
+  domain = "vpc"
+  # network_interface = aws_network_interface.nic.id
+  depends_on = [aws_internet_gateway.gw]
+}
+
+# resource "aws_eip_association" "eip_assoc" {
+#   instance_id   = module.ec2server1.first_server_id
+#   allocation_id = aws_eip.one.id
+# }

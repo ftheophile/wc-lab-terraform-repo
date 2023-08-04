@@ -1,2 +1,2 @@
 environment = "Labs"
-purpose = "Learning"
+purpose     = "Learning"

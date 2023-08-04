@@ -1,30 +1,30 @@
 variable "dev-region" {
-    type = string
-    default = "us-east-1"
-    description = "Region to deployment development resources" 
+  type        = string
+  default     = "us-east-1"
+  description = "Region to deployment development resources"
 }
 
 variable "prod-region" {
-    type = list(string)
-    default = ["us-east-1"]
-    description = "Region to deployment Production resources" 
+  type        = list(string)
+  default     = ["us-east-1"]
+  description = "Region to deployment Production resources"
 }
 
 variable "dev_tags" {
-    type = number
-    default = 1234.45
+  type    = number
+  default = 1234.45
 }
 
 variable "org_name" {
-    type = string
+  type = string
 
 }
 
 variable "environment" {
-    type = string
+  type = string
 }
 
 variable "purpose" {
-    type = string
-    default = "Cloud learning"
+  type    = string
+  default = "Cloud learning"
 }
