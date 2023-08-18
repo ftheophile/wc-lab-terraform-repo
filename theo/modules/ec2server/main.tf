@@ -15,7 +15,7 @@ echo 'wirfon first server' > /var/www/html/index.html
 EOF
 
   tags = {
-    Name = "${var.org_name} Production instance"
+    Name = var.org_name
     Env = "${var.environment}-environment"
     Purpose = "${var.purpose}"
   }

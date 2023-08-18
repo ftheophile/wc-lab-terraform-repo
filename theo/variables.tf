@@ -17,7 +17,6 @@ variable "dev_tags" {
 
 variable "org_name" {
   type = string
-
 }
 
 variable "environment" {
